@@ -49,6 +49,8 @@ app.post("/user/signup", async (req, res) => {
       text: "Email aktivasyon",
       html: `<a href='http://localhost:3000/userauth/${newUser._id}'>Aktivasyon Linki</a>`,
     });
+
+    console.log("Message sent: %s", info.messageId);
   }
 
   sendMail().catch(console.error);
