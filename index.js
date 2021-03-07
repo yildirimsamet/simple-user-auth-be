@@ -47,7 +47,7 @@ app.post("/user/signup", async (req, res) => {
       to: newUser.email,
       subject: "Email aktivasyon",
       text: "Email aktivasyon",
-      html: `<a href='http://localhost:3000/userauth/${newUser._id}'>Aktivasyon Linki</a>`,
+      html: `<a href='https://simple-user-auth.vercel.app/userauth/${newUser._id}'>Aktivasyon Linki</a>`,
     });
 
     console.log("Message sent: %s", info.messageId);
