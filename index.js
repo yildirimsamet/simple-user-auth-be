@@ -32,9 +32,10 @@ app.post("/user/signup", async (req, res) => {
   }
   async function sendMail() {
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      // host: "smtp.gmail.com",
+      // port: 587,
+      // secure: false,
+      service: "gmail",
       auth: {
         type: "login",
         user: "sametyildirimtest@gmail.com",
